@@ -1,0 +1,30 @@
+# Python virtual environments
+backend/venv/
+Backend/venv/
+venv/
+env/
+.venv/
+**/venv/
+**/env/
+**/.venv/
+
+# Environment variables (root, backend, frontend)
+.env
+.env.*
+**/.env
+**/.env.*
+
+# Frontend dependencies and build output
+frontend/node_modules/
+Frontend/node_modules/
+frontend/build/
+Frontend/build/
+frontend/dist/
+Frontend/dist/
+
+# Python cache and compiled bytecode
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd

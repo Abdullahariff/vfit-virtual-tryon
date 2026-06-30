@@ -1,0 +1,38 @@
+[
+  {
+"id": "item_001",
+    "name": "Classic Navy Blue Shirt",
+    "category": "Formal",
+    "occasion": ["Wedding", "Business Meeting", "Interview", "Presentation", "University Presentation"],
+    "description": "A sharp, tailored navy suit for formal excellence and academic presentations.",
+    "color": "Navy Blue",
+    "image_path": "images/classic navy blue shirt.png"
+  },
+  {
+    "id": "item_002",
+    "name": "White Linen Button-Down",
+    "category": "Semi-Formal",
+    "occasion": ["Office", "Dinner", "Date Night"],
+    "description": "Breathable white linen shirt, stays crisp and cool.",
+    "color": "White",
+    "image_path": "images/white linen button down.png"
+  },
+  {
+    "id": "item_003",
+    "name": "Black Performance Tracksuit",
+    "category": "Sportswear",
+    "occasion": ["Gym", "Cricket", "Running", "Football"],
+    "description": "Stretchable fabric designed for high-intensity sports.",
+    "color": "Black",
+    "image_path": "images/black performance tracksuit.png"
+  },
+  {
+    "id": "item_004",
+    "name": "Casual Beige Chinos",
+    "category": "Casual",
+    "occasion": ["Hangout", "Shopping", "Casual Friday"],
+    "description": "Versatile beige pants that go with almost anything.",
+    "color": "Beige",
+    "image_path": "images/casual beige chinos.png"
+  }
+]

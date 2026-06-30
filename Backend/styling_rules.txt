@@ -1,0 +1,6 @@
+STYLING RULES & GUIDELINES:
+1. Contrast Rule: If wearing a light-colored top (White, Beige), pair it with a darker bottom (Black, Navy).
+2. Occasion Matching: Always suggest Formals for Weddings/Interviews and Activewear for Sports.
+3. Skin Tone Advice: For warmer skin tones, suggest earth tones like Olive or Beige. For cooler tones, suggest Blue or Grey.
+4. Footwear Logic: Formal suits must be paired with Oxfords or Loafers. Tracksuits go with Sneakers only.
+5. Layering: Suggest adding a Jacket or Blazer if the user mentions "Winter" or "Evening event".
