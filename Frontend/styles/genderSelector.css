@@ -1,0 +1,188 @@
+/* /styles/genderSelector.css - MILANO COLLECTION SELECTOR */
+
+.build-info {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+  font-size: 0.6rem;
+  font-weight: 800;
+  color: var(--milano-black); /* Changed from white to black */
+  pointer-events: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.gender-selector {
+  max-width: 100%; /* Edge-to-edge luxury feel */
+  margin: 0;
+  padding: 60px;
+}
+
+.gender-selector-header {
+  text-align: left; /* Aligned left for editorial style */
+  margin-bottom: 60px;
+}
+
+.gender-selector-title {
+  font-size: clamp(3rem, 10vw, 8rem); /* Massive Milano-style headline */
+  font-weight: 900;
+  margin: 0;
+  color: var(--milano-black);
+  background: none; /* Removed the blue gradient */
+  -webkit-text-fill-color: initial;
+  text-transform: uppercase;
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+}
+
+.gender-selector-subtitle {
+  font-size: 0.9rem;
+  color: var(--milano-gray);
+  margin-top: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  line-height: 1.5;
+}
+
+.gender-options {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important; /* Side-by-side like a lookbook */
+  gap: 0 !important; /* Touching panels for a seamless look */
+  margin-top: 40px !important;
+  border: 2px solid var(--milano-black);
+}
+
+.gender-option {
+  background: var(--milano-beige);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: var(--transition);
+  border-radius: 0; /* Sharp edges */
+  overflow: hidden;
+  width: 100%;
+}
+
+.gender-option:first-child {
+  border-right: 2px solid var(--milano-black);
+}
+
+.gender-card {
+  position: relative;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 80px 40px;
+  height: auto;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  backdrop-filter: none;
+  transition: all 0.3s ease;
+}
+
+/* Milano Hover State: Invert the colors */
+.gender-option:hover .gender-card {
+  background-color: var(--milano-black);
+}
+
+.gender-option:hover .gender-title,
+.gender-option:hover .gender-description,
+.gender-option:hover .gender-icon,
+.gender-option:hover .feature-tag {
+  color: var(--milano-beige);
+}
+
+.gender-icon-wrapper {
+  margin-bottom: 32px;
+}
+
+.gender-icon {
+  font-size: 4rem;
+  width: auto;
+  height: auto;
+  display: flex;
+  color: var(--milano-black);
+  background: none;
+  border: none;
+  font-weight: 200; /* Thin, elegant icons */
+  transition: var(--transition);
+}
+
+/* Removed all blue/cyan glow animations */
+.icon-glow {
+  display: none;
+}
+
+.gender-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin: 0;
+  color: var(--milano-black);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.gender-description {
+  font-size: 0.8rem;
+  color: var(--milano-gray);
+  margin: 10px 0;
+  line-height: 1.6;
+  font-weight: 700;
+  text-transform: uppercase;
+  max-width: 250px;
+}
+
+.gender-features {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.feature-tag {
+  font-size: 0.65rem;
+  padding: 6px 12px;
+  background: transparent;
+  border-radius: 0;
+  color: var(--milano-black);
+  font-weight: 800;
+  border: 1px solid var(--milano-black);
+  text-transform: uppercase;
+}
+
+.selection-indicator {
+  margin-top: 30px;
+}
+
+.selection-indicator span {
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border-bottom: 2px solid currentColor;
+}
+
+/* RESPONSIVE MILANO */
+@media screen and (max-width: 999px) {
+  .gender-selector {
+    padding: 30px;
+  }
+
+  .gender-options {
+    grid-template-columns: 1fr !important; /* Stack on mobile */
+  }
+
+  .gender-option:first-child {
+    border-right: none;
+    border-bottom: 2px solid var(--milano-black);
+  }
+
+  .gender-card {
+    padding: 60px 20px;
+    min-height: 300px;
+  }
+}

@@ -1,0 +1,194 @@
+/* /styles/privacy.css - MILANO LEGAL & PRIVACY */
+
+.privacy-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for focus */
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.privacy-modal {
+  background-color: var(--milano-beige);
+  border-radius: 0; /* Sharp edges for luxury look */
+  border: 2px solid var(--milano-black);
+  box-shadow: 20px 20px 0px rgba(0, 0, 0, 1); /* Brutalist shadow style */
+  max-width: 600px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.privacy-modal-content {
+  padding: 48px;
+  text-align: left; /* Left aligned for editorial feel */
+}
+
+.privacy-modal-content h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  margin: 0 0 24px 0;
+  color: var(--milano-black);
+  line-height: 0.9;
+}
+
+.privacy-modal-content p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--milano-black);
+  margin: 0 0 24px 0;
+  font-weight: 500;
+}
+
+.privacy-link {
+  color: var(--milano-black);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: var(--transition);
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.privacy-link:hover {
+  opacity: 0.6;
+}
+
+.privacy-modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-start;
+  margin-top: 32px;
+}
+
+.btn-privacy-close,
+.btn-privacy-agree {
+  border-radius: 0; /* Sharp corners */
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 16px 32px;
+}
+
+.btn-privacy-close {
+  background-color: transparent;
+  border: 2px solid var(--milano-black);
+  color: var(--milano-black);
+}
+
+.btn-privacy-close:hover {
+  background-color: var(--milano-black);
+  color: var(--milano-beige);
+}
+
+.btn-privacy-agree {
+  background-color: var(--milano-black);
+  border: 2px solid var(--milano-black);
+  color: var(--milano-beige);
+  box-shadow: none; /* Removed the purple glow */
+}
+
+.btn-privacy-agree:hover {
+  background-color: #333;
+  transform: none;
+}
+
+/* Privacy Policy Page */
+.privacy-policy-page {
+  background-color: var(--milano-beige);
+  z-index: 10001;
+}
+
+.privacy-policy-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 40px;
+}
+
+.privacy-policy-header {
+  text-align: left;
+  margin-bottom: 60px;
+}
+
+.back-btn {
+  position: static;
+  background: var(--milano-black);
+  border: none;
+  color: var(--milano-beige);
+  padding: 12px 24px;
+  border-radius: 0;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.privacy-policy-header h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 0.8;
+  color: var(--milano-black);
+  background: none;
+  -webkit-text-fill-color: initial;
+}
+
+.privacy-policy-content h2 {
+  font-size: 1.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--milano-black);
+  border-bottom: 2px solid var(--milano-black);
+  margin-top: 48px;
+}
+
+/* MOBILE OVERRIDES - Fixed the oversized font issues */
+@media (max-width: 999px) {
+  .privacy-modal {
+    width: 95%;
+    border-radius: 0;
+  }
+
+  .privacy-modal-content {
+    padding: 30px;
+  }
+
+  .privacy-modal-content h2 {
+    font-size: 2rem !important;
+  }
+
+  .privacy-modal-content p,
+  .privacy-policy-content p,
+  .privacy-policy-content li {
+    font-size: 1rem !important; /* Fixed the massive 4.8rem fonts */
+  }
+
+  .privacy-modal-actions {
+    flex-direction: column;
+  }
+
+  .btn-privacy-agree,
+  .btn-privacy-close {
+    width: 100%;
+    font-size: 0.9rem !important;
+  }
+
+  .privacy-policy-header h1 {
+    font-size: 3rem !important;
+  }
+}

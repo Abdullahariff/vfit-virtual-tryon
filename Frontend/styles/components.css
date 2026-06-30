@@ -1,0 +1,230 @@
+/* /styles/components.css - MILANO COMPONENT REDESIGN */
+
+.component-container {
+  margin-bottom: 24px;
+}
+
+.component-title {
+  font-size: 0.75rem;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: var(--milano-black);
+  border-bottom: 1px solid var(--milano-black);
+  padding-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  background-color: transparent; /* Minimalist clean look */
+  border-radius: 0;
+  padding: 10px 0;
+  font-size: 0.8rem;
+  border: none;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding-bottom: 4px;
+}
+
+.info-label {
+  color: var(--milano-gray);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+.info-value {
+  font-weight: 800;
+  color: var(--milano-black);
+  letter-spacing: -0.01em;
+}
+
+.status-success {
+  color: #2d5a27;
+}
+.status-warning {
+  color: #8a6d3b;
+}
+.status-error {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.gender-toggle-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0; /* Merged buttons for a designer look */
+  margin-bottom: 12px;
+  border: 1px solid var(--milano-black);
+}
+
+.gender-toggle-btn {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 12px;
+  font-size: 0.75rem;
+  color: var(--milano-black);
+  text-transform: uppercase;
+  transition: var(--transition);
+  cursor: pointer;
+  font-weight: 800;
+  flex: 1;
+}
+
+.gender-toggle-btn:hover {
+  background-color: var(--milano-black);
+  color: var(--milano-beige);
+}
+
+.gender-toggle-btn.active {
+  background-color: var(--milano-black);
+  color: var(--milano-beige);
+  box-shadow: none;
+}
+
+.home-bar-btn {
+  background-color: var(--milano-black);
+  border: none;
+  border-radius: 0;
+  padding: 16px;
+  font-size: 0.8rem;
+  color: var(--milano-beige);
+  transition: var(--transition);
+  cursor: pointer;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  width: 100%;
+}
+
+.home-bar-btn:hover {
+  background-color: #333;
+  transform: none;
+}
+
+.vfit-back-to-menu-btn {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 100;
+  background: rgba(231, 228, 223, 0.92);
+  color: var(--milano-black);
+  border: 1px solid var(--milano-black);
+  padding: 10px 16px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: inherit;
+}
+
+.vfit-back-to-menu-btn:hover {
+  background: var(--milano-black);
+  color: var(--milano-beige);
+}
+
+.vfit-back-to-menu-btn--mobile {
+  position: fixed;
+  top: max(12px, env(safe-area-inset-top, 12px));
+  left: 12px;
+  z-index: 30;
+}
+
+.vfit-logout-btn {
+  position: fixed;
+  top: max(16px, env(safe-area-inset-top, 16px));
+  right: 16px;
+  z-index: 10000;
+  background: var(--milano-black);
+  color: var(--milano-beige);
+  border: 1px solid var(--milano-black);
+  padding: 10px 16px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: inherit;
+}
+
+.vfit-logout-btn:hover {
+  background: #333;
+}
+
+/* Selfie countdown overlay - Removing the neon/glow effects */
+.countdown-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(231, 228, 223, 0.95); /* Beige overlay instead of black */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.countdown-text {
+  font-size: 12rem;
+  font-weight: 900;
+  color: var(--milano-black);
+  text-shadow: none;
+  -webkit-text-stroke: 0;
+  animation: countdown-pulse-milano 1s ease-in-out infinite;
+}
+
+@keyframes countdown-pulse-milano {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Selfie button - Swapped blue gradient for solid black/white luxury style */
+.selfie-btn {
+  padding: 16px 24px;
+  border-radius: 0;
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  border: 1px solid var(--milano-black);
+  background: var(--milano-black);
+  color: var(--milano-beige);
+  transition: all 0.2s ease;
+}
+
+.selfie-btn:hover:not(:disabled) {
+  background: transparent;
+  color: var(--milano-black);
+  transform: none;
+  box-shadow: none;
+}
+
+.selfie-btn.success {
+  background: #2d5a27;
+  border-color: #2d5a27;
+}
+
+.capture-spinner {
+  border-top-color: var(--milano-beige);
+}

@@ -1,0 +1,408 @@
+/* PAGE */
+.splash {
+  width: 100vw;
+  height: 100vh;
+  background: #f7f6f6;
+  position: relative;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  isolation: isolate;
+}
+
+/* TOP LEFT */
+.logo {
+  position: absolute;
+  top: 28px;
+  left: 48px;
+  font-size: 34px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #111;
+  z-index: 10;
+}
+
+/* BIG V (BACKGROUND LAYER) */
+.big-v {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-78%, -45%);
+  font-size: 920px;
+  font-weight: 500;
+  color: #1d1d1d;
+  line-height: 1;
+  z-index: 1; /* lowest layer */
+  pointer-events: none;
+}
+.robot-container {
+  position: absolute;
+  bottom: 0;
+  left: 6%;
+  height: 95%;
+  width: auto;
+  z-index: 5; /* This ensures the div and its image are above the V */
+  display: flex;
+  align-items: flex-end;
+  pointer-events: none; /* Allows clicks to pass through to the button if they overlap */
+}
+/* ROBOT (FORCED ABOVE V) */
+.robot {
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  left: 6%;
+  height: 95%;
+  z-index: 5; /* MUST be higher than V */
+  object-fit: contain;
+  /* ensures no stacking issues */
+  transform: translateZ(0);
+}
+
+/* RIGHT CONTENT */
+.right {
+  position: absolute;
+  right: 15%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  max-width: 360px;
+}
+
+/* TEXT */
+.text {
+  font-size: 32px;
+  line-height: 1.35;
+  color: #222;
+  margin-bottom: 32px;
+}
+
+/* BUTTON */
+.btn {
+  background: #1d1d1d;
+  color: #fff;
+  border: none;
+  padding: 30px 38px;
+  font-size: 18.5px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #f7f6f6;
+  color: #000;
+  /* 'border' needs: width, style, and color to display correctly */
+  border: 2px solid #000;
+
+  /* Optional: Smooth transition for the hover effect */
+  transition: all 0.3s ease;
+}
+.about {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  background: rgb(26, 25, 25);
+  color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+}
+
+/* The "Scale" element - similar to your big 'V' */
+.bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15vw; /* Massive text */
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.041); /* Extremely subtle */
+  z-index: 0;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.about-hero {
+  z-index: 1;
+  font-size: 42px;
+  letter-spacing: -2px;
+  margin-bottom: 120px;
+  text-transform: uppercase;
+}
+
+.cards-container {
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  width: 85%;
+  max-width: 1300px;
+}
+
+.about-card {
+  position: relative;
+  border-left: 1px solid rgba(255, 255, 255, 0.2); /* Side line instead of top */
+  padding-left: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-num {
+  color: rgb(255, 254, 254);
+  display: block;
+  font-family: serif; /* Mixing a serif font here adds a "Vogue" feel */
+  font-size: 50px;
+  font-style: italic;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.about-card p {
+  font-size: 20px;
+  line-height: 1.8;
+  color: #dfdfdf; /* Dimmer text makes headers pop */
+  max-width: 300px;
+}
+
+/* Add a subtle hover effect to keep it interactive */
+.about-card:hover {
+  border-left: 1px solid white;
+}
+.about-card:hover p {
+  color: white;
+}
+/* CONTACT SECTION */
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  background: #111;
+  color: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 0 60px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* subtle giant background text */
+.contact::before {
+  content: "CONTACT";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16vw;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.03);
+  letter-spacing: -10px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* MAIN LAYOUT */
+.contact-container {
+  position: relative;
+  z-index: 2;
+  width: 85%;
+  max-width: 1300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+  align-items: center;
+}
+
+/* LEFT SIDE */
+.contact-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-title {
+  font-size: 78px;
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -4px;
+  margin-bottom: 28px;
+  text-transform: uppercase;
+}
+
+.contact-desc {
+  font-size: 18px;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.68);
+  max-width: 470px;
+  margin-bottom: 60px;
+}
+
+/* CONTACT DETAILS */
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.detail-item {
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  padding-left: 24px;
+  transition: all 0.3s ease;
+}
+
+.detail-item:hover {
+  border-left: 1px solid #fff;
+}
+
+.detail-item span {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 10px;
+}
+
+.detail-item p {
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* FORM */
+.contact-form {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  backdrop-filter: blur(10px);
+}
+
+/* INPUTS */
+.input-group {
+  position: relative;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 18px 0;
+  color: #fff;
+  font-size: 16px;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-group textarea {
+  min-height: 130px;
+  resize: none;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 1px;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-bottom: 1px solid #fff;
+}
+
+/* BUTTON */
+.contact-btn {
+  align-self: flex-start;
+  margin-top: 10px;
+  background: #fff;
+  color: #111;
+  border: 1px solid transparent;
+  padding: 20px 40px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+.contact-btn:hover {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+/* FOOTER */
+.footer-small {
+  position: relative;
+  z-index: 2;
+  width: 85%;
+  max-width: 1300px;
+  margin-top: 100px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+
+  .contact-title {
+    font-size: 56px;
+  }
+
+  .contact-form {
+    padding: 38px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 100px 0 50px;
+  }
+
+  .contact-title {
+    font-size: 44px;
+    letter-spacing: -2px;
+  }
+
+  .contact-desc {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .detail-item p {
+    font-size: 18px;
+  }
+
+  .contact-form {
+    padding: 30px 24px;
+  }
+
+  .contact::before {
+    font-size: 24vw;
+  }
+}

@@ -1,0 +1,100 @@
+/* /styles/layout.css - MILANO MINIMALIST REDESIGN */
+
+.app-container {
+  max-width: 100%; /* Milano uses full-width edge-to-edge design */
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+}
+
+.app-header {
+  padding: 40px 60px;
+  margin-bottom: 0;
+  border-bottom: var(--border-light);
+  display: flex;
+  justify-content: space-between; /* Space for logo on left, menu on right */
+  align-items: center;
+  background-color: var(--background);
+}
+
+.app-footer {
+  margin-top: 60px;
+  padding: 40px 0;
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--milano-black);
+  border-top: var(--border-light);
+  letter-spacing: 0.2em;
+}
+
+.virtual-tryon-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: auto;
+  padding: 0;
+  position: relative;
+  background-color: var(--background);
+}
+
+/* Replaced the blue gradient box with a clean, centered text section */
+.welcome-section {
+  text-align: left; /* Aligned left to match 'GET YOURSELF' style */
+  margin-bottom: 0;
+  padding: 10vh 60px;
+  background: transparent; /* No more blue gradients */
+  border-radius: 0;
+  border: none;
+  backdrop-filter: none;
+}
+
+.welcome-logo {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 30px;
+  filter: none; /* Removed the blue glow */
+  animation: none; /* Removed the floating animation for a stable, premium feel */
+  opacity: 1;
+  transition: var(--transition);
+}
+
+.welcome-logo:hover {
+  filter: brightness(0.8);
+  transform: none;
+}
+
+/* This is the 'GET YOURSELF INTO THE RIGHT GEAR' style */
+.welcome-subtitle {
+  font-size: clamp(3rem, 10vw, 8rem);
+  font-weight: 900;
+  line-height: 0.9;
+  color: var(--milano-black);
+  margin: 0;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  background: none; /* Removed the text gradient */
+  -webkit-text-fill-color: initial;
+}
+
+/* Helper for the split-screen look in your reference */
+.layout-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 80vh;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    padding: 20px;
+  }
+  .welcome-section {
+    padding: 40px 20px;
+  }
+  .layout-split {
+    grid-template-columns: 1fr;
+  }
+}

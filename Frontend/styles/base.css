@@ -1,0 +1,106 @@
+/* /styles/base.css - MILANO STYLE REDESIGN */
+
+:root {
+  /* Milano Signature Palette */
+  --milano-beige: #e7e4df;
+  --milano-black: #000000;
+  --milano-off-white: #f8f7f5;
+  --milano-gray: #6b6b6b;
+
+  /* Primary palette - Swapped to High-Fashion Black/Gray */
+  --primary-50: #f6f6f6;
+  --primary-100: #e7e7e7;
+  --primary-200: #d1d1d1;
+  --primary-300: #b0b0b0;
+  --primary-400: #888888;
+  --primary-500: #000000; /* Main brand color */
+  --primary-600: #000000;
+  --primary-700: #000000;
+  --primary-800: #000000;
+  --primary-900: #000000;
+
+  /* Neutral palette - Warm Tones */
+  --gray-50: #fdfcfb;
+  --gray-100: #f7f5f2;
+  --gray-200: #ece8e1;
+  --gray-300: #d8d2c5;
+  --gray-400: #b6ad9a;
+  --gray-500: #918671;
+  --gray-600: #716857;
+  --gray-700: #544d41;
+  --gray-800: #3a352d;
+  --gray-900: #1e1b17;
+
+  /* Semantic colors */
+  --primary: var(--milano-black);
+  --primary-dark: #333333;
+  --secondary: var(--milano-gray);
+  --error: #af2b2b;
+  --success: #3c5a3e;
+  --warning: #c4a47c;
+  --on-primary: #ffffff;
+  --on-secondary: #ffffff;
+  --on-error: #ffffff;
+
+  /* Theme Colors - Defaulting to Milano Light */
+  --background: var(--milano-beige);
+  --surface: var(--milano-off-white);
+  --surface-light: #ffffff;
+  --on-background: var(--milano-black);
+  --on-surface: var(--milano-black);
+
+  /* Borders, shadows, glass - Sharp & Minimal */
+  --border-radius: 0px; /* Sharp corners for luxury feel */
+  --border-light: 1px solid rgba(0, 0, 0, 0.1);
+  --shadow-1: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --shadow-2: 0 10px 40px rgba(0, 0, 0, 0.08);
+  --shadow-glow: none; /* Removed tech glow */
+  --glass-bg: rgba(231, 228, 223, 0.85);
+  --glass-border: rgba(0, 0, 0, 0.05);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  color-scheme: light;
+}
+
+/* Accessibility: focus-visible */
+:focus-visible {
+  outline: 1.5px solid var(--milano-black);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--milano-black);
+  color: var(--milano-beige);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* Bold, clean sans-serif stack */
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: var(--background);
+  color: var(--on-background);
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase; /* Match the bold Milano headers */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Removed all blue grid patterns */
+  overflow-x: hidden;
+}
+
+/* Hero Typography helper for your 'GET YOURSELF' text */
+.hero-text {
+  font-size: clamp(3rem, 12vw, 9rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 0.85;
+  margin: 0;
+  pointer-events: none;
+}
+
+/* Ensure images and 3D containers fit the minimal aesthetic */
+img,
+canvas {
+  mix-blend-mode: multiply; /* Helps 3D models feel more integrated with beige */
+}
